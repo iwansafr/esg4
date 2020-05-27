@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php echo view('Modules\Admin\Views\templates/'.$template.'/part/meta')?>
+  <?php 
+  echo view('Modules\Admin\Views\templates/'.$template.'/part/meta');
+  ?>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-  <?php echo view('Modules\Admin\Views\templates/'.$template.'/part/navbar')?>
+  <?php 
+  echo view('Modules\Admin\Views\templates/'.$template.'/part/navbar');
+  ?>
   
-  <?php echo view('Modules\Admin\Views\templates/'.$template.'/part/sidebar')?>
+  <?php 
+  echo view('Modules\Admin\Views\templates/'.$template.'/part/sidebar');
+  ?>
   <div class="content-wrapper">
-    <?php echo view('Modules\Admin\Views/'.$view)?>
+    <?php 
+    if($view != 'Modules\Admin\Views\templates/'.$template.'/index')
+    {
+    	echo view('Modules\Admin\Views/'.$view);
+    }
+    ?>
   </div>
   
-  <?php echo view('Modules\Admin\Views\templates/'.$template.'/part/control-sidebar')?>
+  <?php 
+  echo view('Modules\Admin\Views\templates/'.$template.'/part/control-sidebar');
+  ?>
   
-  <?php echo view('Modules\Admin\Views\templates/'.$template.'/part/footer')?>
+  <?php 
+  echo view('Modules\Admin\Views\templates/'.$template.'/part/footer');
+  ?>
 </div>
-  <?php echo view('Modules\Admin\Views\templates/'.$template.'/part/js')?>
+  <?php 
+  echo view('Modules\Admin\Views\templates/'.$template.'/part/js');
+  ?>
 </body>
 </html>
